@@ -5,7 +5,7 @@ A simple Express + Mongo template. Includes examples.
 
 ## To Use
 1. *Term/Cmd:*  start a local mongo server with the command **mongod**.
-2. Open project in ediotr of choice.
+2. Open project in editor of choice.
 3. *Term/Cmd:*  run the command **npm install** to install all project dependencies.
 4. *Term/Cmd*:  to start running the app **npm start**. This calls Nodemon, a package that allows your server to auto refresh whenever you save/make a change in your project!
 
