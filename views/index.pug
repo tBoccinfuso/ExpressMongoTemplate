@@ -1,0 +1,24 @@
+// extends allows us to include our layout page to each pug file.
+extends shared/layout.pug
+
+// block content is what is rendered.
+block content
+  div
+    h1= title
+    form(action="/", method="post")
+      label(for="firstName") First Name
+      input(type='text', name='firstName', id="firstName")
+      br
+      label(for="firstName") Last Name
+      input(type='text', name='lastName', id="lastName")
+      br
+      label(for="firstName") Email
+      input(type='text', name='email', id="email")
+      br
+      button(type="submit") Insert
+
+  // visual indicator for user that a new record get's inserted when posting data to "/".
+  div
+    p(id="response") #{reponse}
+      
+      
