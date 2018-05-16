@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var Insert = require("../models/InsertModel.js");
-var DB = require("../models/DB.js");
+var DB = require('../models/DB.js');
 
 module.exports = {
   find : router.get("/requests", function (req, res){

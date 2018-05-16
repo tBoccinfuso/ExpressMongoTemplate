@@ -1,5 +1,5 @@
 // Include our config file that defines port #
-var config = require('../config/config.json');
+var config = require('./config/config.json');
 var express = require('express');
 const path = require('path');
 // parses post data and lets you access it from req.body.<nameofparam>
@@ -21,18 +21,18 @@ app.set('view engine', 'pug');
 
 
 //ROUTES
-var insertRouter = require('./routes/insert.js');
-var findAllRouter = require('./routes/findAll.js');
+var InsertRouter = require('./controllers/InsertController.js');
+var FindAllRouter = require('./controllers/FindAllController.js');
 
 // handles get requests to <domain>/
 app.get("/", function (req, res) {
   res.render("index");
 });
+// handles post requests to <domain>/
+app.post("/", InsertRouter.insert);
 
-app.post("/", insertRouter);
-
-// After inserting records, go to <domain>/requets and check your term/cmd console for results.
-app.get("/requests", findAllRouter);
+// After inserting records, go to <domain>/requets to see all requests!
+app.get("/requests", FindAllRouter.find);
 
 
 // // handles get request by an id to <domain>/requests
