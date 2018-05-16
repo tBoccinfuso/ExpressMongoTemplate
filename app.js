@@ -1,5 +1,5 @@
 // Include our config file that defines port #
-var config = require('./config.json');
+var config = require('../config/config.json');
 var express = require('express');
 const path = require('path');
 // parses post data and lets you access it from req.body.<nameofparam>
