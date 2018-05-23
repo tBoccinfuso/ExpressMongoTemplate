@@ -35,20 +35,6 @@ app.post("/", InsertRouter.insert);
 app.get("/requests", FindAllRouter.find);
 
 
-// // handles get request by an id to <domain>/requests
-// app.get("/requests/:id", function (res, req){
-//   // returns an insert by the passed in id via url
-//   Insert.findById(req.params.id, function(err, inserts) {
-//     if (err)
-//       res.send(err);
-//     else
-//       res.json(inserts);
-//   });
-// });
-
-
-
-
 // listens for http requests on our Port defined in config.json
 app.listen(config.PORT, function() {
   console.log("listening on port: " + config.PORT);
